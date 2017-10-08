@@ -9,7 +9,7 @@ class Title extends Component {
                 width: "100%",
                 backgroundColor: "#c00",
                 color: "#fff",
-                height: "110px",
+                height: "auto",
                 paddingTop: "15px",
                 paddingBottom: "15px",
                 fontSize: "40px",
@@ -21,7 +21,7 @@ class Title extends Component {
                             <Logo width="70" />
                         </div>
                     </div>
-                    <div className="col-md-8">
+                    <div className="col-md-9">
                         <div style={{ float: "left", whiteSpace: "nowrap" }}>
                             <p style={{ fontSize: "40px", margin: "0", cursor: "pointer" }}>
                                 I<span style={{ fontSize: "32px" }}>OWA </span>

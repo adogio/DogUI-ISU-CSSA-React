@@ -16,8 +16,8 @@ class SearchBar extends Component {
     render() {
         return (
             <div
-            onMouseOver={this.handleHover}
-            onMouseLeave={this.releaseHover}>
+                onMouseOver={this.handleHover}
+                onMouseLeave={this.releaseHover}>
                 <input
                     value={this.state.value}
                     onInput={this.handleInput}
@@ -39,7 +39,7 @@ class SearchBar extends Component {
                         paddingLeft: "5px",
                         transition: "0.3s all",
                         position: "absolute",
-                        bottom: "6px",
+                        bottom: "15px",
                         fontSize: "15px"
                     },
                     this.state.hover ?
@@ -54,7 +54,7 @@ class SearchBar extends Component {
                         transition: "0.3s all",
                         position: "absolute",
                         right: "15px",
-                        bottom: "8px",
+                        bottom: "15px",
                         fontSize: "15px"
                     },
                     this.state.hover ?

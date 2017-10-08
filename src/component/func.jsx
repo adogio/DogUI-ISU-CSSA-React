@@ -19,9 +19,7 @@ class Func extends Component {
                 color: "#444"
             }}>
                 <div className="row">
-                    <div className="col-md-2">
-                    </div>
-                    <div className="col-md-8">
+                    <div className="col-xs-offset-2 col-xs-8">
                         {this.props.tabs ? this.props.tabs.map(this.mapTabs) : null}
                     </div>
                 </div>
