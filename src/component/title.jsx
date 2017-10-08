@@ -16,12 +16,12 @@ class Title extends Component {
                 fontFamily: "'Libre Baskerville', serif"
             }}>
                 <div className="row">
-                    <div className="col-2" style={{ textAlign: "right" }}>
+                    <div className="col-md-2" style={{ textAlign: "right" }}>
                         <div style={{ paddingRight: "30px" }}>
                             <Logo width="70" />
                         </div>
                     </div>
-                    <div className="col-8">
+                    <div className="col-md-8">
                         <div style={{ float: "left", whiteSpace: "nowrap" }}>
                             <p style={{ fontSize: "40px", margin: "0", cursor: "pointer" }}>
                                 I<span style={{ fontSize: "32px" }}>OWA </span>

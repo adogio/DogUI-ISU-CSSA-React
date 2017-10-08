@@ -18,9 +18,9 @@ class DogUIISUCSSA extends Component {
                     <div>
                         <Route path="/" component={(routes) => <Structure tabs={this.props.tabs} routes={routes}>{this.props.children}</Structure>} />
                         <div className="row">
-                            <div className="col-2">
+                            <div className="col-md-2">
                             </div>
-                            <div className="col-8">
+                            <div className="col-md-8">
                                 {this.props.tabs ? this.props.tabs.map(this.mapRoutes) : null}
                             </div>
                         </div>

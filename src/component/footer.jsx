@@ -14,12 +14,27 @@ class Footer extends Component {
                 paddingBottom: "45px"
             }}>
                 <div className="row">
-                    <div className="col-3" style={{ textAlign: "center" }}>
-                        <p style={{ fontSize: "30px", margin: "0", color: "#c00", fontFamily: "'Libre Baskerville', serif", whiteSpace: "nowrap" }}>
+                    <div className="col-md-3" style={{ textAlign: "center" }}>
+                        <p style={{
+                            fontSize: "30px",
+                            margin: "0",
+                            color: "#c00",
+                            fontFamily: "'Libre Baskerville', serif",
+                            whiteSpace: "nowrap",
+                            cursor: "pointer"
+                        }}>
                             I<span style={{ fontSize: "24px" }}>OWA </span>
                             S<span style={{ fontSize: "24px" }}>TATE</span>
                         </p>
-                        <p style={{ fontSize: "25px", paddingTop: "1px", margin: "0", color: "#c00", fontFamily: "'Libre Baskerville', serif", whiteSpace: "nowrap" }}>
+                        <p style={{
+                            fontSize: "25px",
+                            paddingTop: "1px",
+                            margin: "0",
+                            color: "#c00",
+                            fontFamily: "'Libre Baskerville', serif",
+                            whiteSpace: "nowrap",
+                            cursor: "pointer"
+                        }}>
                             UNIVERSITY
                         </p>
                         <p style={{ fontSize: "18px", margin: "0", paddingTop: "10px" }}>
@@ -29,7 +44,7 @@ class Footer extends Component {
                             Scholars Association
                     </p>
                     </div>
-                    <div className="col-3">
+                    <div className="col-md-3">
                         <p style={{ fontSize: "14px", margin: "0" }}><strong>Iowa State Universisy</strong></p>
                         <p style={{ fontSize: "14px", margin: "0" }}>Chinese Students & Scholars Association</p>
                         <br />
@@ -43,13 +58,13 @@ class Footer extends Component {
                         </p>
                         <p style={{ fontSize: "14px", margin: "0" }}>​Memorial Union Ames, iA 50011-1130</p>
                     </div>
-                    <div className="col-3">
+                    <div className="col-md-3">
                         <HoverLink icon="wechat" color="#06ad00" href="http://www.isucssa.org/24494204493902938754.html">Wechat</HoverLink>
                         <HoverLink icon="weibo" color="#da0000" href="http://weibo.com/isucssa">Weibo</HoverLink>
                         <HoverLink icon="facebook-square" color="#008ada" href="https://www.facebook.com/iaisucssa">Facebook</HoverLink>
                         <HoverLink icon="instagram" color="#a115ff" href="https://www.instagram.com/isucssa/">Instragram</HoverLink>
                     </div>
-                    <div className="col-3">
+                    <div className="col-md-3">
                         Copyright © 2017 WMXPY, open sourced under a
                         &nbsp;<a rel="license" style={{ color: "#686868" }} href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>&nbsp;
                         License.<br />

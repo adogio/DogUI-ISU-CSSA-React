@@ -12,9 +12,9 @@ class Nav extends Component {
                 fontSize: "10px"
             }}>
                 <div className="row">
-                    <div className="col-2">
+                    <div className="col-md-2">
                     </div>
-                    <div className="col-8">
+                    <div className="col-md-8">
                         {this.props.children}
                     </div>
                 </div>
