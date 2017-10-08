@@ -1,6 +1,6 @@
 {
   "name": "dogui-isu-cssa",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "DogUI ISU",
   "main": "lib/index.js",
   "scripts": {

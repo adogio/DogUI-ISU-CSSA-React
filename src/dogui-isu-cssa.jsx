@@ -13,7 +13,11 @@ class DogUIISUCSSA extends Component {
                         path="/"
                         component={
                             (routes) =>
-                                <Structure tabs={this.props.tabs} routes={routes} subTitle={this.props.children}>
+                                <Structure
+                                    tabs={this.props.tabs}
+                                    routes={routes}
+                                    source={this.props.source}
+                                    subTitle={this.props.children}>
                                     <div className="row">
                                         <div className="col-md-offset-2 col-md-8">
                                             <RouteManager tabs={this.props.tabs} />

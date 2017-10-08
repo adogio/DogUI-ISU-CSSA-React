@@ -59,10 +59,17 @@ class Footer extends Component {
                         <HoverLink icon="instagram" color="#a115ff" href="https://www.instagram.com/isucssa/">Instragram</HoverLink>
                     </div>
                     <div className="col-md-3">
-                        Copyright © 2017 WMXPY, open sourced under a
+                        <strong>DogUI</strong> Copyright © 2017 WMXPY, open sourced under a
                         &nbsp;<a rel="license" style={{ color: "#686868" }} href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>&nbsp;
-                        License.<br />
-                        <a style={{ color: "#686868" }} href="https://github.com/ISUCSSA/Index"><i className="fa fa-git-square" aria-hidden="true" />Source code</a>
+                        License.
+                        <br />
+                        <a style={{ color: "#686868" }} href="https://github.com/adogio/DogUI-ISU-CSSA-React"><i className="fa fa-git-square fa-fw" aria-hidden="true" />DogUI</a>
+                        <br />
+                        {this.props.source ?
+                            <a style={{ color: "#686868" }} href={this.props.source.link}>
+                                <i className="fa fa-git-code fa-fw" aria-hidden="true" />
+                                this.props.source.name</a> :
+                            null}
                     </div>
                 </div>
             </div>

@@ -21,7 +21,7 @@ class Structure extends Component {
                 <div style={{ minHeight: "100%" }}>
                     {this.props.children}
                 </div>
-                <Footer />
+                <Footer source={this.props.source} />
             </div>
         );
     }
