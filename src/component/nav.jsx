@@ -5,14 +5,13 @@ class Nav extends Component {
         return (
             <div style={{
                 width: "100%",
+                height: "30px",
                 backgroundColor: "#333",
                 color: "#ccc",
-                paddingTop: "5px",
-                paddingBottom: "5px",
                 fontSize: "10px"
             }}>
-                <div className="row">
-                    <div className="col-xs-offset-2 col-xs-8">
+                <div className="row" style={{ height: "100%" }}>
+                    <div className="col-md-offset-2 col-md-8" style={{ height: "100%" }}>
                         {this.props.children}
                     </div>
                 </div>

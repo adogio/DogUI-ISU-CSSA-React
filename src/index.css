@@ -5,3 +5,12 @@ body {
     padding: 0px;
     margin: 0px;
 }
+
+div {
+    overflow: hidden;
+    max-width: 100%;
+}
+
+* {
+    transition: all 0.2s;
+}

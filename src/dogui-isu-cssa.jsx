@@ -1,40 +1,30 @@
 import React, { Component } from 'react';
-import { HashRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import Structure from './component/structure';
-import Footer from './component/footer';
+import RouteManager from './component/routeManager';
 import "./index.css";
 
 class DogUIISUCSSA extends Component {
-
-    constructor(props) {
-        super(props);
-        this.mapRoutes = this.mapRoutes.bind(this);
-    }
-
     render() {
         return (
             <div>
-                <HashRouter>
-                    <div>
-                        <Route path="/" component={(routes) => <Structure tabs={this.props.tabs} routes={routes}>{this.props.children}</Structure>} />
-                        <div className="row">
-                            <div className="col-md-offset-2 col-md-8">
-                                {this.props.tabs ? this.props.tabs.map(this.mapRoutes) : null}
-                            </div>
-                        </div>
-                    </div>
-                </HashRouter>
-                <Footer />
+                <BrowserRouter>
+                    <Route
+                        path="/"
+                        component={
+                            (routes) =>
+                                <Structure tabs={this.props.tabs} routes={routes} subTitle={this.props.children}>
+                                    <div className="row">
+                                        <div className="col-md-offset-2 col-md-8">
+                                            <RouteManager tabs={this.props.tabs} />
+                                        </div>
+                                    </div>
+                                </Structure>
+                        }
+                    />
+                </BrowserRouter>
             </div>
         );
-    }
-
-    mapRoutes(value, index) {
-        return <Route
-            path={"/" + value.route}
-            component={value.component}
-            key={index}
-        />
     }
 }
 

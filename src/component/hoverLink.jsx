@@ -20,15 +20,15 @@ class HoverLink extends Component {
                 style={{ fontSize: "30px", paddingBottom: "10px", cursor: "pointer" }}
                 onMouseOver={this.handleHover}
                 onMouseLeave={this.releaseHover}>
-                <div className="col-md-5"
+                <div className="col-xs-5"
                     style={Object.assign(
-                        { transition: "0.1s all", textAlign: "right" },
+                        { textAlign: "right" },
                         this.state.hover ? { color: this.props.color } : {})}>
                     <i className={"fa fa-fw fa-" + this.props.icon} />
                 </div>
-                <div className="col-md-7"
+                <div className="col-xs-7"
                     style={Object.assign(
-                        { transition: "0.1s all", textAlign: "left" },
+                        { textAlign: "left" },
                         this.state.hover ? { textDecoration: "underline" } : { textDecoration: "none" })}>
                     <span style={{ fontSize: "14px" }}>{this.props.children}</span>
                 </div>

@@ -11,10 +11,12 @@ class Footer extends Component {
                 lineHeight: "24px",
                 padding: "9%",
                 paddingTop: "25px",
-                paddingBottom: "45px"
+                paddingBottom: "45px",
+                bottom: "0px",
+                clear: "both"
             }}>
-                <div className="row">
-                    <div className="col-md-3" style={{ textAlign: "center" }}>
+                <div className="row" style={{ overflow: "visible" }}>
+                    <div className="col-md-3" style={{ textAlign: "center", overflow: "visible" }}>
                         <p style={{
                             fontSize: "30px",
                             margin: "0",
@@ -34,15 +36,9 @@ class Footer extends Component {
                             fontFamily: "'Libre Baskerville', serif",
                             whiteSpace: "nowrap",
                             cursor: "pointer"
-                        }}>
-                            UNIVERSITY
-                        </p>
-                        <p style={{ fontSize: "18px", margin: "0", paddingTop: "10px" }}>
-                            Chinese Students &
-                        </p>
-                        <p style={{ fontSize: "18px", margin: "0" }}>
-                            Scholars Association
-                    </p>
+                        }}>UNIVERSITY</p>
+                        <p style={{ fontSize: "18px", margin: "0", paddingTop: "10px" }}>Chinese Students &</p>
+                        <p style={{ fontSize: "18px", margin: "0" }}> Scholars Association</p>
                     </div>
                     <div className="col-md-3">
                         <p style={{ fontSize: "14px", margin: "0" }}><strong>Iowa State Universisy</strong></p>
@@ -52,10 +48,8 @@ class Footer extends Component {
                             <a href="mailto:cssa.isu.ia@gmail.com"
                                 style={{ color: "#686868" }}>
                                 cssa.isu.ia@gmail.com
-                                </a>
-                        </p>
-                        <p style={{ fontSize: "14px", margin: "0" }}>2229 Lincoln Way C4 1530 Student Office
-                        </p>
+                                </a></p>
+                        <p style={{ fontSize: "14px", margin: "0" }}>2229 Lincoln Way C4 1530 Student Office</p>
                         <p style={{ fontSize: "14px", margin: "0" }}>​Memorial Union Ames, iA 50011-1130</p>
                     </div>
                     <div className="col-md-3">

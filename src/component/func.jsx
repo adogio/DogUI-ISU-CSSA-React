@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FuncButton from './funcButton';
 
 class Func extends Component {
 
@@ -12,13 +13,12 @@ class Func extends Component {
             <div style={{
                 backgroundColor: "#e7e7e7",
                 fontSize: "18px",
-                paddingTop: "13px",
-                paddingBottom: "13px",
+                height: "50px",
                 boxShadowTop: "1px black",
                 boxShadowBottom: "1px black"
             }}>
-                <div className="row">
-                    <div className="col-xs-offset-2 col-xs-8">
+                <div className="row" style={{ height: "100%" }}>
+                    <div className="col-xs-offset-2 col-xs-8" style={{ height: "100%" }}>
                         {this.props.tabs ? this.props.tabs.map(this.mapTabs) : null}
                     </div>
                 </div>
@@ -28,9 +28,10 @@ class Func extends Component {
 
     mapTabs(value, index) {
         const test = () => {
-            this.props.history.replace("/" + value.route)
+            this.props.history.push("/" + value.route);
         }
-        return <a style={{ paddingRight: "40px", cursor: "pointer", color: "#444", textDecoration: "none" }} onClick={test} key={index}>{value.tab}</a>
+        if (!Boolean(value.tab)) return null;
+        return <FuncButton onClick={test} key={index}>{value.tab}</FuncButton>
     }
 }
 
