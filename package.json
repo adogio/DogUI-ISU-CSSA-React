@@ -1,0 +1,25 @@
+{
+  "name": "dogui-isu-cssa",
+  "version": "1.0.0",
+  "description": "DogUI ISU",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adogio/DogUI-ISU-CSSA-React.git"
+  },
+  "keywords": [
+    "DOGUI",
+    "ISU",
+    "CSSA",
+    "REACT"
+  ],
+  "author": "WMXPY",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/adogio/DogUI-ISU-CSSA-React/issues"
+  },
+  "homepage": "https://github.com/adogio/DogUI-ISU-CSSA-React#readme"
+}
