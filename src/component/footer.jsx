@@ -44,22 +44,37 @@ class Footer extends Component {
                         <p style={{ fontSize: "14px", margin: "0" }}><strong>Iowa State Universisy</strong></p>
                         <p style={{ fontSize: "14px", margin: "0" }}>Chinese Students & Scholars Association</p>
                         <br />
-                        <p style={{ fontSize: "14px", margin: "0" }}>
-                            <a href="mailto:cssa.isu.ia@gmail.com"
+                        {this.props.contact.email ? <p style={{ fontSize: "14px", margin: "0" }}>
+                            <a href={"mailto:" + this.props.contact.email}
                                 style={{ color: "#686868" }}>
-                                cssa.isu.ia@gmail.com
-                                </a></p>
-                        <p style={{ fontSize: "14px", margin: "0" }}>2229 Lincoln Way C4 1530 Student Office</p>
-                        <p style={{ fontSize: "14px", margin: "0" }}>​Memorial Union Ames, iA 50011-1130</p>
+                                {this.props.contact.email}
+                            </a>
+                        </p> : null}
+                        {this.props.contact.phone ? <p style={{ fontSize: "14px", margin: "0" }}>
+                            <a href={"tel:" + this.props.contact.phone}
+                                style={{ color: "#686868" }}>
+                                {this.props.contact.phone}
+                            </a>
+                        </p> : null}
+                        <p style={{ fontSize: "14px", margin: "0" }}>{this.props.contact.address}</p>
+                        <p style={{ fontSize: "14px", margin: "0" }}>{this.props.contact.address2}</p>
                     </div>
                     <div className="col-md-3">
-                        <HoverLink icon="wechat" color="#06ad00" href="http://www.isucssa.org/24494204493902938754.html">Wechat</HoverLink>
-                        <HoverLink icon="weibo" color="#da0000" href="http://weibo.com/isucssa">Weibo</HoverLink>
-                        <HoverLink icon="facebook-square" color="#008ada" href="https://www.facebook.com/iaisucssa">Facebook</HoverLink>
-                        <HoverLink icon="instagram" color="#a115ff" href="https://www.instagram.com/isucssa/">Instragram</HoverLink>
+                        {this.props.contact.wechat ?
+                            <HoverLink icon="wechat" color="#06ad00" href={this.props.contact.wechat}>Wechat</HoverLink>
+                            : null}
+                        {this.props.contact.weibo ?
+                            <HoverLink icon="weibo" color="#da0000" href={this.props.contact.weibo}>Weibo</HoverLink>
+                            : null}
+                        {this.props.contact.facebook ?
+                            <HoverLink icon="facebook-square" color="#008ada" href={this.props.contact.facebook}>Facebook</HoverLink>
+                            : null}
+                        {this.props.contact.instagram ?
+                            <HoverLink icon="instagram" color="#a115ff" href={this.props.contact.instagram}>Instragram</HoverLink>
+                            : null}
                     </div>
                     <div className="col-md-3">
-                        <strong>DogUI</strong> Copyright © 2017 WMXPY, open sourced under a
+                        Copyright © 2017 WMXPY, open sourced under a
                         &nbsp;<a rel="license" style={{ color: "#686868" }} href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>&nbsp;
                         License.
                         <br />
@@ -67,8 +82,8 @@ class Footer extends Component {
                         <br />
                         {this.props.source ?
                             <a style={{ color: "#686868" }} href={this.props.source.link}>
-                                <i className="fa fa-git-code fa-fw" aria-hidden="true" />
-                                this.props.source.name</a> :
+                                <i className="fa fa-code fa-fw" aria-hidden="true" />
+                                {this.props.source.name}</a> :
                             null}
                     </div>
                 </div>

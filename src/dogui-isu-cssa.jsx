@@ -17,6 +17,7 @@ class DogUIISUCSSA extends Component {
                                     tabs={this.props.tabs}
                                     routes={routes}
                                     source={this.props.source}
+                                    contact={this.props.contact}
                                     subTitle={this.props.children}>
                                     <div className="row">
                                         <div className="col-md-offset-2 col-md-8">
