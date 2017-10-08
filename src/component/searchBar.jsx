@@ -68,7 +68,7 @@ class SearchBar extends Component {
                     this.state.hover ?
                         { display: "none" } :
                         {},
-                )}><i className="fa fa-search" /></span>
+                )}><i className="fa fa-search" aria-hidden="true" /></span>
             </div>
         );
     }

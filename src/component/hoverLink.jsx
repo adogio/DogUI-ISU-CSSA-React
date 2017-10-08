@@ -24,7 +24,7 @@ class HoverLink extends Component {
                     style={Object.assign(
                         { textAlign: "right" },
                         this.state.hover ? { color: this.props.color } : {})}>
-                    <i className={"fa fa-fw fa-" + this.props.icon} />
+                    <i className={"fa fa-fw fa-" + this.props.icon} aria-hidden="true" />
                 </div>
                 <div className="col-xs-7"
                     style={Object.assign(

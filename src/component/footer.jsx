@@ -62,6 +62,7 @@ class Footer extends Component {
                         Copyright © 2017 WMXPY, open sourced under a
                         &nbsp;<a rel="license" style={{ color: "#686868" }} href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>&nbsp;
                         License.<br />
+                        <a style={{ color: "#686868" }} href="https://github.com/ISUCSSA/Index"><i className="fa fa-git-square" aria-hidden="true" />Source code</a>
                     </div>
                 </div>
             </div>
