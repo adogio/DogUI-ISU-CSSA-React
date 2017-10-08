@@ -8,9 +8,9 @@ class Structure extends Component {
         return (
             <div>
                 <Nav>
-                    <a style={{ paddingRight: "17px", cursor: "pointer" }}>isucssa.org</a>
-                    <a style={{ paddingRight: "17px", cursor: "pointer" }}>Index</a>
-                    <a style={{ paddingRight: "17px", cursor: "pointer" }}>Directory</a>
+                    <a style={{ paddingRight: "17px", cursor: "pointer", color: "#ccc", textDecoration: "none" }}>isucssa.org</a>
+                    <a style={{ paddingRight: "17px", cursor: "pointer", color: "#ccc", textDecoration: "none" }}>Index</a>
+                    <a style={{ paddingRight: "17px", cursor: "pointer", color: "#ccc", textDecoration: "none" }}>Directory</a>
                 </Nav>
                 <Title>{this.props.children}</Title>
                 <Func tabs={this.props.tabs} history={this.props.routes.history} />

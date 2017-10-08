@@ -15,8 +15,7 @@ class Func extends Component {
                 paddingTop: "13px",
                 paddingBottom: "13px",
                 boxShadowTop: "1px black",
-                boxShadowBottom: "1px black",
-                color: "#444"
+                boxShadowBottom: "1px black"
             }}>
                 <div className="row">
                     <div className="col-xs-offset-2 col-xs-8">
@@ -31,7 +30,7 @@ class Func extends Component {
         const test = () => {
             this.props.history.replace("/" + value.route)
         }
-        return <a style={{ paddingRight: "40px", cursor: "pointer" }} onClick={test} key={index}>{value.tab}</a>
+        return <a style={{ paddingRight: "40px", cursor: "pointer", color: "#444", textDecoration: "none" }} onClick={test} key={index}>{value.tab}</a>
     }
 }
 
