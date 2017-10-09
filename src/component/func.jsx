@@ -11,7 +11,8 @@ class Func extends Component {
     render() {
         return (
             <div style={{
-                backgroundColor: "#e7e7e7",
+                backgroundColor: this.props.anti ? "#222222" : "#e7e7e7",
+                color: this.props.anti ? "#cccccc" : "#444444",
                 fontSize: "18px",
                 height: "50px",
                 boxShadowTop: "1px black",
@@ -31,7 +32,7 @@ class Func extends Component {
             this.props.history.push("/" + value.route);
         }
         if (!Boolean(value.tab)) return null;
-        return <FuncButton onClick={test} key={index}>{value.tab}</FuncButton>
+        return <FuncButton onClick={test} key={index} anti={this.props.anti}>{value.tab}</FuncButton>
     }
 }
 

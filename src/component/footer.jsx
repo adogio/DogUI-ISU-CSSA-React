@@ -5,8 +5,8 @@ class Footer extends Component {
     render() {
         return (
             <div style={{
-                backgroundColor: "#f3f3f3",
-                color: "#686868",
+                backgroundColor: this.props.anti ? "#000000" : "#f3f3f3",
+                color: this.props.anti ? "#dddddd" : "#686868",
                 fontSize: "14px",
                 lineHeight: "24px",
                 padding: "9%",
@@ -46,13 +46,13 @@ class Footer extends Component {
                         <br />
                         {this.props.contact.email ? <p style={{ fontSize: "14px", margin: "0" }}>
                             <a href={"mailto:" + this.props.contact.email}
-                                style={{ color: "#686868" }}>
+                                style={{ color: this.props.anti ? "#ffffff" : "#686868" }}>
                                 {this.props.contact.email}
                             </a>
                         </p> : null}
                         {this.props.contact.phone ? <p style={{ fontSize: "14px", margin: "0" }}>
                             <a href={"tel:" + this.props.contact.phone}
-                                style={{ color: "#686868" }}>
+                                style={{ color: this.props.anti ? "#ffffff" : "#686868" }}>
                                 {this.props.contact.phone}
                             </a>
                         </p> : null}
@@ -75,13 +75,13 @@ class Footer extends Component {
                     </div>
                     <div className="col-md-3">
                         Copyright © 2017 WMXPY, open sourced under a
-                        &nbsp;<a rel="license" style={{ color: "#686868" }} href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>&nbsp;
+                        &nbsp;<a rel="license" style={{ color: this.props.anti ? "#ffffff" : "#686868" }} href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>&nbsp;
                         License.
                         <br />
-                        <a style={{ color: "#686868" }} href="https://github.com/adogio/DogUI-ISU-CSSA-React"><i className="fa fa-git-square fa-fw" aria-hidden="true" />DogUI</a>
+                        <a style={{ color: this.props.anti ? "#ffffff" : "#686868" }} href="https://github.com/adogio/DogUI-ISU-CSSA-React"><i className="fa fa-git-square fa-fw" aria-hidden="true" />DogUI</a>
                         <br />
                         {this.props.source ?
-                            <a style={{ color: "#686868" }} href={this.props.source.link}>
+                            <a style={{ color: this.props.anti ? "#ffffff" : "#686868" }} href={this.props.source.link}>
                                 <i className="fa fa-code fa-fw" aria-hidden="true" />
                                 {this.props.source.name}</a> :
                             null}

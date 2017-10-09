@@ -17,11 +17,14 @@ class Structure extends Component {
                     <HoverButton>Directory</HoverButton>
                 </Nav>
                 <Title>{this.props.subTitle}</Title>
-                <Func tabs={this.props.tabs} history={this.props.routes.history} />
-                <div style={{ minHeight: "100%" }}>
+                <Func tabs={this.props.tabs} history={this.props.routes.history} anti={this.props.anti} />
+                <div style={Object.assign({ minHeight: "100%", transition: "1s background-color ease" },
+                    this.props.anti ?
+                        { backgroundColor: "#333333", color: "#ffffff" } :
+                        { backgroundColor: "#fcfcfc", color: "#010101" })}>
                     {this.props.children}
                 </div>
-                <Footer source={this.props.source} contact={this.props.contact} />
+                <Footer source={this.props.source} contact={this.props.contact} anti={this.props.anti} />
             </div>
         );
     }
