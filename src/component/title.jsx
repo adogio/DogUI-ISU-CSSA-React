@@ -9,7 +9,7 @@ class Title extends Component {
                 width: "100%",
                 backgroundColor: "#c00",
                 color: "#fff",
-                height: "auto",
+                height: "150px",
                 paddingTop: "15px",
                 paddingBottom: "15px",
                 fontSize: "40px",
@@ -22,13 +22,20 @@ class Title extends Component {
                         </div>
                     </div>
                     <div className="col-md-9">
-                        <div style={{ float: "left", whiteSpace: "nowrap" }}>
-                            <p style={{ fontSize: "40px", margin: "0", cursor: "pointer" }}>
-                                I<span style={{ fontSize: "32px" }}>OWA </span>
-                                S<span style={{ fontSize: "32px" }}>TATE </span>
-                                U<span style={{ fontSize: "32px" }}>NIVERSITY</span></p>
-                            <p style={{ fontSize: "21px", margin: "0", marginTop: "-10px", cursor: "pointer" }}>Chinese Students & Scholars Association</p>
-                            <p style={{ fontSize: "24px", margin: "0", paddingTop: "10px", cursor: "pointer" }}><strong>{this.props.children}</strong></p>
+                        <div style={{ float: "left", whiteSpace: "nowrap", paddingTop: this.props.info.department ? "0px" : "10px" }}>
+                            <p style={{ fontSize: this.props.info.sub ? "40px" : "44px", margin: "0", cursor: "pointer" }}>
+                                I<span style={{ fontSize: this.props.info.sub ? "32px" : "36px" }}>OWA </span>
+                                S<span style={{ fontSize: this.props.info.sub ? "32px" : "36px" }}>TATE </span>
+                                U<span style={{ fontSize: this.props.info.sub ? "32px" : "36px" }}>NIVERSITY</span></p>
+                            {this.props.info.sub ?
+                                <p style={{ fontSize: "21px", margin: "0", marginTop: "-10px", cursor: "pointer" }}>
+                                    {this.props.info.sub}
+                                </p> : null}
+                            {this.props.info.department ?
+                                <p style={{ fontSize: "24px", margin: "0", paddingTop: "10px", cursor: "pointer" }}>
+                                    <strong>{this.props.info.department.toUpperCase()}</strong>
+                                </p>
+                                : null}
                         </div>
                         <div style={{ width: "35%", maxWidth: "400px", position: "absolute", right: "0px", textAlign: "right" }}>
                             <SearchBar />

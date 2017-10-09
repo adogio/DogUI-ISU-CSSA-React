@@ -38,9 +38,7 @@ class HoverLink extends Component {
 
     hrefTo() {
         if (this.props.href) {
-            let a = document.createElement("a");
-            a.href = this.props.href;
-            a.click();
+            window.open(this.props.href);
         }
     }
 

@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import HoverLink from './hoverLink';
 
 class Footer extends Component {
+
+    constructor(props) {
+        super(props);
+        this.linkToISU = this.linkToISU.bind(this);
+    }
+
     render() {
         return (
             <div style={{
@@ -16,7 +22,7 @@ class Footer extends Component {
                 clear: "both"
             }}>
                 <div className="row" style={{ overflow: "visible" }}>
-                    <div className="col-md-3" style={{ textAlign: "center", overflow: "visible" }}>
+                    <div className="col-md-3" style={{ textAlign: "center", overflow: "visible" }} onClick={this.linkToISU}>
                         <p style={{
                             fontSize: "30px",
                             margin: "0",
@@ -37,58 +43,74 @@ class Footer extends Component {
                             whiteSpace: "nowrap",
                             cursor: "pointer"
                         }}>UNIVERSITY</p>
-                        <p style={{ fontSize: "18px", margin: "0", paddingTop: "10px" }}>Chinese Students &</p>
-                        <p style={{ fontSize: "18px", margin: "0" }}> Scholars Association</p>
+                        {this.props.info.sub ?
+                            <p style={{ fontSize: "14px", margin: "0", paddingTop: "10px" }}>{this.props.info.sub}</p>
+                            : null}
                     </div>
                     <div className="col-md-3">
                         <p style={{ fontSize: "14px", margin: "0" }}><strong>Iowa State Universisy</strong></p>
-                        <p style={{ fontSize: "14px", margin: "0" }}>Chinese Students & Scholars Association</p>
+                        {this.props.info.sub ?
+                            <p style={{ fontSize: "14px", margin: "0" }}>{this.props.info.sub}</p>
+                            : null}
                         <br />
-                        {this.props.contact.email ? <p style={{ fontSize: "14px", margin: "0" }}>
-                            <a href={"mailto:" + this.props.contact.email}
+                        {this.props.info.email ? <p style={{ fontSize: "14px", margin: "0" }}>
+                            <a href={"mailto:" + this.props.info.email}
                                 style={{ color: this.props.anti ? "#ffffff" : "#686868" }}>
-                                {this.props.contact.email}
+                                {this.props.info.email}
                             </a>
                         </p> : null}
-                        {this.props.contact.phone ? <p style={{ fontSize: "14px", margin: "0" }}>
-                            <a href={"tel:" + this.props.contact.phone}
+                        {this.props.info.phone ? <p style={{ fontSize: "14px", margin: "0" }}>
+                            <a href={"tel:" + this.props.info.phone}
                                 style={{ color: this.props.anti ? "#ffffff" : "#686868" }}>
-                                {this.props.contact.phone}
+                                {this.props.info.phone}
                             </a>
                         </p> : null}
-                        <p style={{ fontSize: "14px", margin: "0" }}>{this.props.contact.address}</p>
-                        <p style={{ fontSize: "14px", margin: "0" }}>{this.props.contact.address2}</p>
+                        <p style={{ fontSize: "14px", margin: "0" }}>{this.props.info.address}</p>
+                        <p style={{ fontSize: "14px", margin: "0" }}>{this.props.info.address2}</p>
                     </div>
                     <div className="col-md-3">
-                        {this.props.contact.wechat ?
-                            <HoverLink icon="wechat" color="#06ad00" href={this.props.contact.wechat}>Wechat</HoverLink>
+                        {this.props.info.wechat ?
+                            <HoverLink icon="wechat" color="#06ad00" href={this.props.info.wechat}>Wechat</HoverLink>
                             : null}
-                        {this.props.contact.weibo ?
-                            <HoverLink icon="weibo" color="#da0000" href={this.props.contact.weibo}>Weibo</HoverLink>
+                        {this.props.info.weibo ?
+                            <HoverLink icon="weibo" color="#da0000" href={this.props.info.weibo}>Weibo</HoverLink>
                             : null}
-                        {this.props.contact.facebook ?
-                            <HoverLink icon="facebook-square" color="#008ada" href={this.props.contact.facebook}>Facebook</HoverLink>
+                        {this.props.info.facebook ?
+                            <HoverLink icon="facebook-square" color="#008ada" href={this.props.info.facebook}>Facebook</HoverLink>
                             : null}
-                        {this.props.contact.instagram ?
-                            <HoverLink icon="instagram" color="#a115ff" href={this.props.contact.instagram}>Instragram</HoverLink>
+                        {this.props.info.instagram ?
+                            <HoverLink icon="instagram" color="#a115ff" href={this.props.info.instagram}>Instragram</HoverLink>
+                            : null}
+                        {this.props.info.twitter ?
+                            <HoverLink icon="twitter" color="#00c5f7" href={this.props.info.twitter}>Twitter</HoverLink>
+                            : null}
+                        {this.props.info.snapchat ?
+                            <HoverLink icon="snapchat-square" color="#e5ff00" href={this.props.info.snapchat}>Snapchat</HoverLink>
+                            : null}
+                        {this.props.info.pinterest ?
+                            <HoverLink icon="pinterest" color="#e20f00" href={this.props.info.pinterest}>Pinterest</HoverLink>
                             : null}
                     </div>
                     <div className="col-md-3">
                         Copyright © 2017 WMXPY, open sourced under a
-                        &nbsp;<a rel="license" style={{ color: this.props.anti ? "#ffffff" : "#686868" }} href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>&nbsp;
+                        &nbsp;<a rel="license" style={{ color: this.props.anti ? "#ffffff" : "#686868", cursor: "pointer" }} href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>&nbsp;
                         License.
                         <br />
-                        <a style={{ color: this.props.anti ? "#ffffff" : "#686868" }} href="https://github.com/adogio/DogUI-ISU-CSSA-React"><i className="fa fa-git-square fa-fw" aria-hidden="true" />DogUI</a>
+                        <a style={{ color: this.props.anti ? "#ffffff" : "#686868", cursor: "pointer" }} onClick={() => { window.open("https://github.com/adogio/DogUI-ISU-CSSA-React") }}><i className="fa fa-git-square fa-fw" aria-hidden="true" />&nbsp;DogUI</a>
                         <br />
                         {this.props.source ?
-                            <a style={{ color: this.props.anti ? "#ffffff" : "#686868" }} href={this.props.source.link}>
+                            <a style={{ color: this.props.anti ? "#ffffff" : "#686868", cursor: "pointer" }} onClick={() => { window.open(this.props.source.link) }}>
                                 <i className="fa fa-code fa-fw" aria-hidden="true" />
-                                {this.props.source.name}</a> :
+                                &nbsp;{this.props.source.name}</a> :
                             null}
                     </div>
                 </div>
             </div>
         );
+    }
+
+    linkToISU() {
+        window.open("https://www.iastate.edu");
     }
 }
 

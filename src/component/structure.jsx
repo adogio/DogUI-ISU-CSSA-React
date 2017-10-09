@@ -8,15 +8,18 @@ import Footer from './footer';
 
 class Structure extends Component {
 
+    constructor(props) {
+        super(props);
+        this.renderNavs = this.renderNavs.bind(this);
+    }
+
     render() {
         return (
             <div>
                 <Nav>
-                    <HoverButton>isucssa.org</HoverButton>
-                    <HoverButton>Index</HoverButton>
-                    <HoverButton>Directory</HoverButton>
+                    {this.props.navs.map(this.renderNavs)}
                 </Nav>
-                <Title>{this.props.subTitle}</Title>
+                <Title info={this.props.info}>{this.props.subTitle}</Title>
                 <Func tabs={this.props.tabs} history={this.props.routes.history} anti={this.props.anti} />
                 <div style={Object.assign({ minHeight: "100%", transition: "1s background-color ease" },
                     this.props.anti ?
@@ -24,9 +27,28 @@ class Structure extends Component {
                         { backgroundColor: "#fcfcfc", color: "#010101" })}>
                     {this.props.children}
                 </div>
-                <Footer source={this.props.source} contact={this.props.contact} anti={this.props.anti} />
+                <Footer source={this.props.source} info={this.props.info} anti={this.props.anti} />
             </div>
         );
+    }
+
+    renderNavs(value, index) {
+        let fun;
+        switch (value.type) {
+            case "func":
+            case "fun":
+            case "function":
+                fun = value.click;
+                break;
+            case "route":
+            case "routes":
+            case "router":
+                fun = () => { this.props.routes.history.push(value.click) };
+                break;
+            default:
+                fun = () => { };
+        }
+        return <HoverButton onClick={fun}>{value.nav}</HoverButton>
     }
 }
 

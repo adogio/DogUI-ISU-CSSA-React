@@ -34,10 +34,11 @@ class DogUIISUCSSA extends Component {
                             (routes) =>
                                 <Structure
                                     tabs={this.props.tabs}
+                                    navs={this.props.navs}
                                     routes={routes}
                                     anti={this.state.anti}
                                     source={this.props.source}
-                                    contact={this.props.contact}
+                                    info={this.props.info}
                                     subTitle={this.props.children}>
                                     <div className="row">
                                         <div className="col-md-offset-2 col-md-8">
