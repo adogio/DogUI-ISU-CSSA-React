@@ -1,7 +1,7 @@
 {
-  "name": "dogui-isu-cssa",
+  "name": "dcy",
   "version": "1.1.5",
-  "description": "DogUI ISU",
+  "description": "DogUI with iastate.edu styling",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
