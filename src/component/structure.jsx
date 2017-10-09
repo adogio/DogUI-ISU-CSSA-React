@@ -48,7 +48,7 @@ class Structure extends Component {
             default:
                 fun = () => { };
         }
-        return <HoverButton onClick={fun}>{value.nav}</HoverButton>
+        return <HoverButton onClick={fun} key={index}>{value.nav}</HoverButton>
     }
 }
 
