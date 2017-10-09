@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import HoverLink from './hoverLink';
+import Dogo from 'dogo';
 
 class Footer extends Component {
 
@@ -96,13 +97,12 @@ class Footer extends Component {
                         &nbsp;<a rel="license" style={{ color: this.props.anti ? "#ffffff" : "#686868", cursor: "pointer" }} href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>&nbsp;
                         License.
                         <br />
-                        <a style={{ color: this.props.anti ? "#ffffff" : "#686868", cursor: "pointer" }} onClick={() => { window.open("https://github.com/adogio/DogUI-ISU-CSSA-React") }}><i className="fa fa-git-square fa-fw" aria-hidden="true" />&nbsp;DogUI</a>
-                        <br />
                         {this.props.source ?
                             <a style={{ color: this.props.anti ? "#ffffff" : "#686868", cursor: "pointer" }} onClick={() => { window.open(this.props.source.link) }}>
                                 <i className="fa fa-code fa-fw" aria-hidden="true" />
-                                &nbsp;{this.props.source.name}</a> :
+                                <span style={{ paddingLeft: "4px", paddingRight: "4px" }}>{this.props.source.name}</span></a> :
                             null}
+                        <Dogo width="18" height="18" force onClick={() => { window.open("http://adog.io") }}></Dogo>
                     </div>
                 </div>
             </div>

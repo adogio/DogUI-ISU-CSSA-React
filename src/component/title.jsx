@@ -7,8 +7,8 @@ class Title extends Component {
         return (
             <div style={{
                 width: "100%",
-                backgroundColor: "#c00",
-                color: "#fff",
+                backgroundColor: "#cc0000",
+                color: "#ffffff",
                 height: "150px",
                 paddingTop: "15px",
                 paddingBottom: "15px",
