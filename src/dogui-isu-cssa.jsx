@@ -27,28 +27,50 @@ class DogUIISUCSSA extends Component {
     render() {
         return (
             <div>
-                <BrowserRouter>
-                    <Route
-                        path="/"
-                        component={
-                            (routes) =>
-                                <Structure
-                                    tabs={this.props.tabs}
-                                    navs={this.props.navs}
-                                    routes={routes}
-                                    anti={this.state.anti}
-                                    source={this.props.source}
-                                    info={this.props.info}
-                                    subTitle={this.props.children}>
-                                    <div className="row">
-                                        <div className="col-md-offset-2 col-md-8">
-                                            <RouteManager tabs={this.props.tabs} />
-                                        </div>
+                {this.props.history || this.props.routes ? <Route
+                    path="/"
+                    component={
+                        (routes) =>
+                            <Structure
+                                tabs={this.props.tabs}
+                                navs={this.props.navs}
+                                routes={routes}
+                                anti={this.state.anti}
+                                source={this.props.source}
+                                info={this.props.info}
+                                pre={this.props.pre}
+                                subTitle={this.props.children}>
+                                <div className="row">
+                                    <div className="col-md-offset-2 col-md-8">
+                                        <RouteManager tabs={this.props.tabs} pre={this.props.pre} />
                                     </div>
-                                </Structure>
-                        }
-                    />
-                </BrowserRouter>
+                                </div>
+                            </Structure>
+                    }
+                /> :
+                    <BrowserRouter>
+                        <Route
+                            path="/"
+                            component={
+                                (routes) =>
+                                    <Structure
+                                        tabs={this.props.tabs}
+                                        navs={this.props.navs}
+                                        routes={routes}
+                                        anti={this.state.anti}
+                                        source={this.props.source}
+                                        info={this.props.info}
+                                        pre={this.props.pre}
+                                        subTitle={this.props.children}>
+                                        <div className="row">
+                                            <div className="col-md-offset-2 col-md-8">
+                                                <RouteManager tabs={this.props.tabs} pre={this.props.pre} />
+                                            </div>
+                                        </div>
+                                    </Structure>
+                            }
+                        />
+                    </BrowserRouter>}
             </div>
         );
     }

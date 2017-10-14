@@ -29,7 +29,7 @@ class Func extends Component {
 
     mapTabs(value, index) {
         const test = () => {
-            this.props.history.push("/" + value.route);
+            this.props.history.push("/" + this.props.pre + "/" + value.route);
         }
         if (!Boolean(value.tab)) return null;
         return <FuncButton onClick={test} key={index} anti={this.props.anti}>{value.tab}</FuncButton>

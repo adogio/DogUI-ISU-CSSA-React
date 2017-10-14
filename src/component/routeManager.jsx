@@ -20,17 +20,17 @@ class RouteManager extends Component {
     mapRoutes(value, index) {
         if (value.redirect) {
             return <Route
-                path={"/" + value.route}
+                path={"/" + this.props.pre + "/" + value.route}
                 exact={value.route.length <= 1}
                 key={index}
                 render={() =>
-                    (<Redirect to={value.redirect} />)
+                    (<Redirect to={"/" + this.props.pre + "/" + value.redirect} />)
                 }
             />
         }
         const Component = value.component;
         return <Route
-            path={"/" + value.route}
+            path={"/" + this.props.pre + "/" + value.route}
             exact={value.route.length <= 1}
             render={() => { return <Component /> }}
             key={index}

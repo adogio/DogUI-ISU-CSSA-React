@@ -20,7 +20,7 @@ class Structure extends Component {
                     {this.props.navs.map(this.renderNavs)}
                 </Nav>
                 <Title info={this.props.info}>{this.props.subTitle}</Title>
-                <Func tabs={this.props.tabs} history={this.props.routes.history} anti={this.props.anti} />
+                <Func tabs={this.props.tabs} history={this.props.routes.history} anti={this.props.anti} pre={this.props.pre} />
                 <div style={Object.assign({ minHeight: "100%", transition: "1s background-color ease" },
                     this.props.anti ?
                         { backgroundColor: "#333333", color: "#ffffff" } :
