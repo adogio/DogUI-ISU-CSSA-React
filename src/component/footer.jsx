@@ -20,7 +20,7 @@ class Footer extends Component {
                 paddingTop: "25px",
                 paddingBottom: "45px",
                 bottom: "0px",
-                clear: "both"
+                clear: "both",
             }}>
                 <div className="row" style={{ overflow: "visible" }}>
                     <div className="col-md-3" style={{ textAlign: "center", overflow: "visible" }} onClick={this.linkToISU}>
@@ -30,7 +30,8 @@ class Footer extends Component {
                             color: "#c00",
                             fontFamily: "'Libre Baskerville', serif",
                             whiteSpace: "nowrap",
-                            cursor: "pointer"
+                            cursor: "pointer",
+                            userSelect: "none"
                         }}>
                             I<span style={{ fontSize: "24px" }}>OWA </span>
                             S<span style={{ fontSize: "24px" }}>TATE</span>
@@ -42,7 +43,8 @@ class Footer extends Component {
                             color: "#c00",
                             fontFamily: "'Libre Baskerville', serif",
                             whiteSpace: "nowrap",
-                            cursor: "pointer"
+                            cursor: "pointer",
+                            userSelect: "none"
                         }}>UNIVERSITY</p>
                         {this.props.info.sub ?
                             <p style={{ fontSize: "14px", margin: "0", paddingTop: "10px" }}>{this.props.info.sub}</p>
@@ -69,7 +71,7 @@ class Footer extends Component {
                         <p style={{ fontSize: "14px", margin: "0" }}>{this.props.info.address}</p>
                         <p style={{ fontSize: "14px", margin: "0" }}>{this.props.info.address2}</p>
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-md-3" style={{ userSelect: "none" }}>
                         {this.props.info.wechat ?
                             <HoverLink icon="wechat" color="#06ad00" href={this.props.info.wechat}>Wechat</HoverLink>
                             : null}
@@ -98,7 +100,11 @@ class Footer extends Component {
                         License.
                         <br />
                         {this.props.source ?
-                            <a style={{ color: this.props.anti ? "#ffffff" : "#686868", cursor: "pointer" }} onClick={() => { window.open(this.props.source.link) }}>
+                            <a style={{
+                                color: this.props.anti ? "#ffffff" : "#686868",
+                                cursor: "pointer",
+                                userSelect: "none",
+                            }} onClick={() => { window.open(this.props.source.link) }}>
                                 <i className="fa fa-code fa-fw" aria-hidden="true" />
                                 <span style={{ paddingLeft: "4px", paddingRight: "4px" }}>{this.props.source.name}</span></a> :
                             null}

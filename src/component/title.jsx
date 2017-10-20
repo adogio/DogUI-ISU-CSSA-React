@@ -9,20 +9,26 @@ class Title extends Component {
                 width: "100%",
                 backgroundColor: "#cc0000",
                 color: "#ffffff",
-                height: "150px",
+                minHeight: "150px",
+                height: "auto",
                 paddingTop: "15px",
                 paddingBottom: "15px",
                 fontSize: "40px",
                 fontFamily: "'Libre Baskerville', serif"
             }}>
                 <div className="row">
-                    <div className="col-md-2" style={{ textAlign: "right" }}>
+                    <div className="col-sm-2" style={{ textAlign: "right" }}>
                         <div style={{ paddingRight: "30px" }}>
                             <Logo width="70" />
                         </div>
                     </div>
-                    <div className="col-md-9">
-                        <div style={{ float: "left", whiteSpace: "nowrap", paddingTop: this.props.info.department ? "0px" : "10px" }}>
+                    <div className="col-sm-9">
+                        <div style={{
+                            float: "left",
+                            whiteSpace: "nowrap",
+                            paddingTop: this.props.info.department ? "0px" : "10px",
+                            userSelect: "none"
+                        }}>
                             <p style={{ fontSize: this.props.info.sub ? "40px" : "44px", margin: "0", cursor: "pointer" }}>
                                 I<span style={{ fontSize: this.props.info.sub ? "32px" : "36px" }}>OWA </span>
                                 S<span style={{ fontSize: this.props.info.sub ? "32px" : "36px" }}>TATE </span>

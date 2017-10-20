@@ -22,6 +22,7 @@ class FuncButton extends Component {
                     cursor: "pointer",
                     border: "0px",
                     height: "100%",
+                    minHeight: "50px",
                     textDecoration: "none"
                 }, this.state.hover ? { backgroundColor: this.props.anti ? "#555555" : "#cccccc" } : { backgroundColor: "transparent" })}
                 onClick={this.props.onClick}>

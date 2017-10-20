@@ -48,7 +48,8 @@ class SearchBar extends Component {
                         transition: "0.3s all",
                         position: "absolute",
                         bottom: "8px",
-                        fontSize: "15px"
+                        fontSize: "15px",
+                        userSelect: "none"
                     },
                     this.state.hover ?
                         { left: "0px", display: "none" } :

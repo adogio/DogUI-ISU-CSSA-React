@@ -14,12 +14,14 @@ class Func extends Component {
                 backgroundColor: this.props.anti ? "#222222" : "#e7e7e7",
                 color: this.props.anti ? "#cccccc" : "#444444",
                 fontSize: "18px",
-                height: "50px",
+                minHeight: "50px",
+                height: "auto",
                 boxShadowTop: "1px black",
-                boxShadowBottom: "1px black"
+                boxShadowBottom: "1px black",
+                userSelect: "none"
             }}>
-                <div className="row" style={{ height: "100%" }}>
-                    <div className="col-xs-offset-2 col-xs-8" style={{ height: "100%" }}>
+                <div className="row" style={{ height: "100%", minHeight: "50px" }}>
+                    <div className="col-sm-offset-2 col-sm-8" style={{ height: "100%", minHeight: "50px" }}>
                         {this.props.tabs ? this.props.tabs.map(this.mapTabs) : null}
                     </div>
                 </div>

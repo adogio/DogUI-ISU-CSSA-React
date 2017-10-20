@@ -8,7 +8,8 @@ class Nav extends Component {
                 height: "30px",
                 backgroundColor: "#333",
                 color: "#ccc",
-                fontSize: "10px"
+                fontSize: "10px",
+                userSelect: "none"
             }}>
                 <div className="row" style={{ height: "100%" }}>
                     <div className="col-md-offset-2 col-md-8" style={{ height: "100%" }}>
