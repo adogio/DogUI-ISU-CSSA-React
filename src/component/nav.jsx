@@ -12,7 +12,7 @@ class Nav extends Component {
                 userSelect: "none"
             }}>
                 <div className="row" style={{ height: "100%" }}>
-                    <div className="col-md-offset-2 col-md-8" style={{ height: "100%" }}>
+                    <div className="col-sm-offset-2 col-sm-8" style={{ height: "100%" }}>
                         {this.props.children}
                     </div>
                 </div>
