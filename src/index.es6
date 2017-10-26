@@ -1,5 +1,5 @@
 import DogUIISUCSSA from './dogui-isu-cssa';
-import Logo from './component/logo';
+import logo from './component/logo';
 
 export default DogUIISUCSSA;
-export const Logo;
+export const Logo = logo;
