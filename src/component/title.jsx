@@ -13,7 +13,7 @@ class Title extends Component {
                 height: "auto",
                 paddingTop: "15px",
                 paddingBottom: "15px",
-                fontSize: "40px",
+                fontSize: "2.7vw",
                 fontFamily: "'Libre Baskerville', serif"
             }}>
                 <div className="row">
@@ -29,16 +29,16 @@ class Title extends Component {
                             paddingTop: this.props.info.department ? "0px" : "10px",
                             userSelect: "none"
                         }}>
-                            <p style={{ fontSize: this.props.info.sub ? "40px" : "44px", margin: "0", cursor: "pointer" }}>
-                                I<span style={{ fontSize: this.props.info.sub ? "32px" : "36px" }}>OWA </span>
-                                S<span style={{ fontSize: this.props.info.sub ? "32px" : "36px" }}>TATE </span>
-                                U<span style={{ fontSize: this.props.info.sub ? "32px" : "36px" }}>NIVERSITY</span></p>
+                            <p style={{ fontSize: this.props.info.sub ? "2.6vw" : "3vw", margin: "0", cursor: "pointer" }}>
+                                I<span style={{ fontSize: this.props.info.sub ? "2.2vw" : "2.5vw" }}>OWA </span>
+                                S<span style={{ fontSize: this.props.info.sub ? "2.2vw" : "2.5vw" }}>TATE </span>
+                                U<span style={{ fontSize: this.props.info.sub ? "2.2vw" : "2.5vw" }}>NIVERSITY</span></p>
                             {this.props.info.sub ?
-                                <p style={{ fontSize: "21px", margin: "0", marginTop: "-10px", cursor: "pointer" }}>
+                                <p style={{ fontSize: "1.6vw", margin: "0", marginTop: "-1vw", cursor: "pointer" }}>
                                     {this.props.info.sub}
                                 </p> : null}
                             {this.props.info.department ?
-                                <p style={{ fontSize: "24px", margin: "0", paddingTop: "10px", cursor: "pointer" }}>
+                                <p style={{ fontSize: "1.7vw", margin: "0", paddingTop: "1vw", cursor: "pointer" }}>
                                     <strong>{this.props.info.department.toUpperCase()}</strong>
                                 </p>
                                 : null}

@@ -1,6 +1,6 @@
 {
   "name": "dcy",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "DogUI with iastate.edu styling",
   "main": "lib/index.js",
   "scripts": {
