@@ -1,25 +1,39 @@
-.dcy-xs {
-    font-size: 1.7vw;
+@media screen and (min-width: 1366px) {
+    .dcy-xs {
+        font-size: 1.4vw;
+    }
+    .dcy-small {
+        font-size: 2vw;
+    }
+    .dcy-medium {
+        font-size: 2.1vw;
+    }
+    .dcy-xl,
+    .dcy-large {
+        font-size: 2.5vw;
+    }
+    .dcy-searchBar {
+        padding-top: 2.6vh;
+    }
 }
 
-.dcy-small {
-    font-size: 2.2vw;
-}
-
-.dcy-medium {
-    font-size: 2.5vw;
-}
-
-.dcy-large {
-    font-size: 2.8vw;
-}
-
-.dcy-xl {
-    font-size: 3.2vw;
-}
-
-.dcy-searchBar {
-    padding-top: 3vh;
+@media screen and (max-width: 1366px) and (min-width: 1024px) {
+    .dcy-large,
+    .dcy-xl {
+        font-size: 3.3vw;
+        padding-left: 2vw;
+    }
+    .dcy-small,
+    .dcy-medium {
+        font-size: 2.7vw;
+    }
+    .dcy-xs {
+        padding-left: 2vw;
+        font-size: 2vw;
+    }
+    .dcy-searchBar {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -38,6 +52,9 @@
     }
     .dcy-searchBar {
         display: none;
+    }
+    .dcy-main {
+        padding-left: 2.5vw;
     }
 }
 

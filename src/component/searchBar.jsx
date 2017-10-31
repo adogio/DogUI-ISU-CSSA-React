@@ -47,7 +47,7 @@ class SearchBar extends Component {
                         paddingLeft: "5px",
                         transition: "0.3s all",
                         position: "absolute",
-                        bottom: "8px",
+                        bottom: "5px",
                         fontSize: "15px",
                         userSelect: "none"
                     },

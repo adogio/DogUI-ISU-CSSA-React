@@ -34,7 +34,7 @@ class Title extends Component {
                                 S<span className={this.props.info.sub ? "dcy-small" : "dcy-medium"}>TATE </span>
                                 U<span className={this.props.info.sub ? "dcy-small" : "dcy-medium"}>NIVERSITY</span></p>
                             {this.props.info.sub ?
-                                <p className="dcy-xs" style={{ margin: "0", marginTop: "-1vw", cursor: "pointer" }}>
+                                <p className="dcy-xs" style={{ margin: "0", marginTop: "-0.7vh", cursor: "pointer" }}>
                                     {this.props.info.sub}
                                 </p> : null}
                             {this.props.info.department ?
