@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Logo from './logo';
 import SearchBar from './searchBar';
+import './flex.css';
 
 class Title extends Component {
     render() {
@@ -13,12 +14,11 @@ class Title extends Component {
                 height: "auto",
                 paddingTop: "15px",
                 paddingBottom: "15px",
-                fontSize: "2.7vw",
                 fontFamily: "'Libre Baskerville', serif"
             }}>
                 <div className="row">
                     <div className="col-sm-2" style={{ textAlign: "right" }}>
-                        <div style={{ paddingRight: "30px" }}>
+                        <div style={{ paddingRight: "10px" }}>
                             <Logo width="70" />
                         </div>
                     </div>
@@ -29,21 +29,21 @@ class Title extends Component {
                             paddingTop: this.props.info.department ? "0px" : "10px",
                             userSelect: "none"
                         }}>
-                            <p style={{ fontSize: this.props.info.sub ? "2.6vw" : "3vw", margin: "0", cursor: "pointer" }}>
-                                I<span style={{ fontSize: this.props.info.sub ? "2.2vw" : "2.5vw" }}>OWA </span>
-                                S<span style={{ fontSize: this.props.info.sub ? "2.2vw" : "2.5vw" }}>TATE </span>
-                                U<span style={{ fontSize: this.props.info.sub ? "2.2vw" : "2.5vw" }}>NIVERSITY</span></p>
+                            <p className={this.props.info.sub ? "dcy-large" : "dcy-xl"} style={{ margin: "0", cursor: "pointer" }}>
+                                I<span className={this.props.info.sub ? "dcy-small" : "dcy-medium"}>OWA </span>
+                                S<span className={this.props.info.sub ? "dcy-small" : "dcy-medium"}>TATE </span>
+                                U<span className={this.props.info.sub ? "dcy-small" : "dcy-medium"}>NIVERSITY</span></p>
                             {this.props.info.sub ?
-                                <p style={{ fontSize: "1.6vw", margin: "0", marginTop: "-1vw", cursor: "pointer" }}>
+                                <p className="dcy-xs" style={{ margin: "0", marginTop: "-1vw", cursor: "pointer" }}>
                                     {this.props.info.sub}
                                 </p> : null}
                             {this.props.info.department ?
-                                <p style={{ fontSize: "1.7vw", margin: "0", paddingTop: "1vw", cursor: "pointer" }}>
+                                <p className="dcy-xs" style={{ margin: "0", cursor: "pointer" }}>
                                     <strong>{this.props.info.department.toUpperCase()}</strong>
                                 </p>
                                 : null}
                         </div>
-                        <div style={{ width: "35%", maxWidth: "400px", position: "absolute", right: "0px", textAlign: "right" }}>
+                        <div className="dcy-searchBar" style={{ width: "35%", maxWidth: "400px", position: "absolute", right: "0px", textAlign: "right" }}>
                             <SearchBar />
                         </div>
                     </div>
