@@ -43,7 +43,7 @@ class Title extends Component {
                                 </p>
                                 : null}
                         </div>
-                        <div className="dcy-searchBar" style={{ width: "35%", maxWidth: "400px", position: "absolute", right: "0px", textAlign: "right" }}>
+                        <div className="dcy-searchBar" style={{ width: "38%", maxWidth: "400px", position: "absolute", right: "1px", textAlign: "right" }}>
                             <SearchBar />
                         </div>
                     </div>
