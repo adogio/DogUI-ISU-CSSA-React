@@ -22,14 +22,11 @@ class Structure extends Component {
                 </Nav>
                 <Title info={this.props.info}>{this.props.subTitle}</Title>
                 <Func tabs={this.props.tabs} history={this.props.routes.history} anti={this.props.anti} pre={this.props.pre} />
-                <div style={
-                    Object.assign({
-                        minHeight: "100%", transition: "1s background-color ease"
-                    },
-                        this.props.anti ?
-                            { backgroundColor: "#333333", color: "#ffffff" } :
-                            { backgroundColor: "#fcfcfc", color: "#010101" })
-                }>
+                <div style={Object.assign({
+                    minHeight: "100%", transition: "1s background-color ease"
+                }, this.props.anti ?
+                        { backgroundColor: "#333333", color: "#ffffff" } :
+                        { backgroundColor: "#fcfcfc", color: "#010101" })}>
                     {this.props.children}
                 </div>
                 <Footer source={this.props.source} info={this.props.info} anti={this.props.anti} />

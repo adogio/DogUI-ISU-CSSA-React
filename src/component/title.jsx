@@ -4,6 +4,7 @@ import SearchBar from './searchBar';
 import './flex.css';
 
 class Title extends Component {
+
     render() {
         return (
             <div style={{
