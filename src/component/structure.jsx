@@ -11,7 +11,6 @@ class Structure extends Component {
     constructor(props) {
         super(props);
         this.renderNavs = this.renderNavs.bind(this);
-        console.log(props)
     }
 
     render() {

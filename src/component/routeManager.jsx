@@ -6,14 +6,24 @@ class RouteManager extends Component {
     constructor(props) {
         super(props);
         this.mapRoutes = this.mapRoutes.bind(this);
+        this.tabConfigeriter = this.tabConfigeriter.bind(this);
     }
 
     render() {
         return (
             <Switch>
-                {this.props.tabs ? this.props.tabs.map(this.mapRoutes) : null}
+                {this.tabConfigeriter()}
             </Switch>
         );
+    }
+
+    tabConfigeriter() {
+        if (!Boolean(this.props.tabs)) return null;
+        if (this.props.tabs.map) {
+            return this.props.tabs.map(this.mapRoutes);
+        } else {
+            return this.mapRoutes(this.props.tabs, null);
+        }
     }
 
 
