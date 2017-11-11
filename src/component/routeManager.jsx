@@ -32,7 +32,15 @@ class RouteManager extends Component {
         return <Route
             path={"/" + this.props.pre + "/" + value.route}
             exact={value.route.length <= 1}
-            render={() => { return <Component /> }}
+            render={() => {
+                return value.full ?
+                    <Component /> :
+                    <div className="row">
+                        <div className="col-sm-offset-2 col-sm-8 dcy-main">
+                            <Component />
+                        </div>
+                    </div>
+            }}
             key={index}
         />
     }

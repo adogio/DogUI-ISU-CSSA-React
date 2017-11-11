@@ -62,11 +62,7 @@ class DogUIISUCSSA extends Component {
                                         info={this.props.info}
                                         pre={this.props.pre}
                                         subTitle={this.props.children}>
-                                        <div className="row">
-                                            <div className="col-sm-offset-2 col-sm-8">
-                                                <RouteManager tabs={this.props.tabs} pre={this.props.pre} />
-                                            </div>
-                                        </div>
+                                        <RouteManager tabs={this.props.tabs} pre={this.props.pre} />
                                     </Structure>
                             }
                         />
